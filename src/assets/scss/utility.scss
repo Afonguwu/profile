@@ -1,0 +1,67 @@
+@use 'variables' as v;
+
+//color
+.heading-dark {
+  color: v.$dark-heading;
+}
+.heading-secondary {
+  color: v.$secondary-heading;
+}
+.text-light {
+  color: v.$light-text;
+}
+.text-primary {
+  color: v.$primary-heading;
+}
+.mark-primary {
+  color: v.$primary-mark;
+}
+.mark-secondary {
+  color: v.$secondary-mark;
+}
+
+//background
+.bg-dark {
+  background-color: v.$primary-bg;
+}
+.bg-light {
+  background-color: v.$secondary-bg;
+}
+
+//typography
+.h1 {
+  font-size: v.$h1;
+  font-weight: 700;
+}
+.h2 {
+  font-size: v.$h2;
+  font-weight: 600;
+}
+.h2-chinese {
+  font-size: v.$h2;
+  font-weight: 500;
+}
+.h3 {
+  font-size: v.$h3;
+  font-weight: 700;
+}
+.h3-chinese {
+  font-size: v.$h3;
+  font-weight: 600;
+}
+.text {
+  font-size: v.$text;
+}
+.lh-lg {
+  line-height: 1.5;
+}
+
+//display
+.d-block {
+  display: block;
+}
+
+//space
+.mb-1 {
+  margin-bottom: 1rem;
+}

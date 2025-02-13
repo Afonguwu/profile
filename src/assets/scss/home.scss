@@ -1,0 +1,27 @@
+@use 'variables' as v;
+.banner {
+  min-height: 350px;
+  background:
+    linear-gradient(rgba(v.$primary-bg, 0.35), rgba(v.$primary-bg, 0.35)),
+    url('/banner.jpg') no-repeat right center/cover;
+  div {
+    width: 75%;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.introduction {
+  .img-block {
+    margin-bottom: 2rem;
+  }
+  @media (min-width: v.$pad) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .img-block {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+  }
+}
