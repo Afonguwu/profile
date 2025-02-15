@@ -12,8 +12,12 @@
   margin: 0;
   font-weight: normal;
 }
-a,
-.green {
+#app {
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+a {
   text-decoration: none;
   transition: 0.4s;
   padding: 3px;
@@ -24,8 +28,7 @@ img {
 }
 body {
   min-height: 100vh;
-  color: v.$light-text;
-  background-color: v.$secondary-bg;
+  color: v.$blue-100;
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -52,5 +55,8 @@ body {
 }
 
 section {
-  padding: 3rem;
+  padding: 1.5rem 2rem;
+  @media (min-width: v.$pad) {
+    padding: 2rem 4rem;
+  }
 }

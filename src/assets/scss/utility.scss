@@ -2,30 +2,39 @@
 
 //color
 .heading-dark {
-  color: v.$dark-heading;
+  color: v.$blue-500;
 }
-.heading-secondary {
-  color: v.$secondary-heading;
+.heading-brown-200 {
+  color: v.$brown-200;
 }
 .text-light {
-  color: v.$light-text;
+  color: v.$blue-100;
 }
-.text-primary {
-  color: v.$primary-heading;
+.text-blue-200 {
+  color: v.$blue-200;
 }
-.mark-primary {
-  color: v.$primary-mark;
+.text-blue-300 {
+  color: v.$blue-300;
 }
-.mark-secondary {
-  color: v.$secondary-mark;
+.text-blue-400 {
+  color: v.$blue-400;
+}
+.notice-blue-200 {
+  color: v.$blue-200;
+}
+.notice-brown-300 {
+  color: v.$brown-300;
 }
 
 //background
 .bg-dark {
-  background-color: v.$primary-bg;
+  background-color: v.$blue-300;
 }
 .bg-light {
-  background-color: v.$secondary-bg;
+  background-color: v.$brown-100;
+}
+.bg-orange {
+  background-color: v.$brown-200;
 }
 
 //typography
@@ -55,6 +64,12 @@
 .lh-lg {
   line-height: 1.5;
 }
+.fw-b {
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}
 
 //display
 .d-block {
@@ -64,4 +79,12 @@
 //space
 .mb-1 {
   margin-bottom: 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+//width
+.w-fit {
+  width: fit-content;
 }

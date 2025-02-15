@@ -2,7 +2,7 @@
 .banner {
   min-height: 350px;
   background:
-    linear-gradient(rgba(v.$primary-bg, 0.35), rgba(v.$primary-bg, 0.35)),
+    linear-gradient(rgba(v.$blue-300, 0.35), rgba(v.$blue-300, 0.35)),
     url('/banner.jpg') no-repeat right center/cover;
   div {
     width: 75%;
@@ -22,6 +22,30 @@
     .img-block {
       margin-right: 2rem;
       margin-bottom: 0;
+    }
+  }
+}
+
+.work {
+  .img-block {
+    display: flex;
+    justify-content: center;
+    figure {
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  div {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+    img {
+      margin-bottom: 1rem;
     }
   }
 }
