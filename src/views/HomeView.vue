@@ -1,5 +1,15 @@
 <script setup>
 import TimelineBtns from '@/components/TimelineBtns.vue'
+import { ref } from 'vue'
+const projectData = ref([
+  {
+    workName: '',
+    time: '',
+    url: '',
+    pages: [],
+    skill: [],
+  },
+])
 </script>
 
 <template>
@@ -7,7 +17,7 @@ import TimelineBtns from '@/components/TimelineBtns.vue'
     <div>
       <h1 class="h1 heading-brown-200">PORTFOLIO</h1>
       <p class="h3 text-light">Dora Xie</p>
-      <p class="h3 text-light">Front-end Engineer</p>
+      <p class="h3-chinese text-light">謝璨如</p>
     </div>
   </div>
   <main>
@@ -17,9 +27,10 @@ import TimelineBtns from '@/components/TimelineBtns.vue'
         <div>
           <h2 class="heading-dark h2-chinese mb-1">About</h2>
           <p class="text-blue-400 text lh-lg">
-            我是 Dora，一個熱愛學習與探索新知的人，喜歡專注於細節並追求完美呈現。
-            近期，我的目標是做到精雕細琢但不鑽牛角尖。平時我喜歡玩 RPG
-            遊戲、做刺繡或畫插圖，這些興趣幫助我在閒暇時放鬆心情、激發靈感。未來，我希望能保持熱情與毅力，持續提升自己的能力與價值。
+            我是璨如，疫情期間透過線上體驗課程接觸到前端工程師這個領域，並深深喜愛上參與網頁從無到有的創造過程。
+            我是一個熱愛學習與探索新知的人，喜歡專注於細節，追求完美呈現。近期，我的目標是做到精雕細琢但不鑽牛角尖。
+            <br />平時，我喜歡玩 RPG
+            遊戲、做刺繡或畫插圖，這些興趣不僅讓我放鬆心情，也時常激發靈感。未來，我希望能保持熱情與毅力，持續提升自己的能力與價值。
           </p>
         </div>
       </div>
@@ -51,7 +62,7 @@ import TimelineBtns from '@/components/TimelineBtns.vue'
           </div>
           <div>
             <div class="mb-1">
-              <h3 class="text-blue-400 fw-b">展示頁面</h3>
+              <h3 class="text-blue-400 fw-b">專案發想</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facere alias cumque
                 maiores aperiam. Dignissimos corrupti sit illum repellat nesciunt? Quod quae non,
@@ -59,7 +70,7 @@ import TimelineBtns from '@/components/TimelineBtns.vue'
               </p>
             </div>
             <div class="mb-1">
-              <h3 class="text-blue-400 fw-b">使用技術</h3>
+              <h3 class="text-blue-400 fw-b">網站頁面</h3>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo non necessitatibus
                 dolorum, eveniet ratione beatae iure asperiores nemo et voluptates facere
@@ -67,13 +78,17 @@ import TimelineBtns from '@/components/TimelineBtns.vue'
               </p>
             </div>
             <div class="mb-1">
-              <h3 class="text-blue-400 fw-b">專案技術</h3>
+              <h3 class="text-blue-400 fw-b">使用技術</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti
                 exercitationem maiores labore molestiae quasi. Nisi, ad! Et delectus voluptatem
                 omnis, recusandae dolores, quod deleniti dolorum in, nemo repellat consequatur!
               </p>
             </div>
+          </div>
+          <div>
+            <button><a href="">GitHub</a></button>
+            <button><a href="">Pages</a></button>
           </div>
         </div>
       </div>
