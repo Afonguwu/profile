@@ -13,15 +13,20 @@
 }
 .introduction {
   .img-block {
-    margin-bottom: 2rem;
+    width: 50%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
   }
   @media (min-width: v.$pad) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     .img-block {
+      width: 35%;
       margin-right: 2rem;
-      margin-bottom: 0;
     }
   }
 }
@@ -33,6 +38,13 @@
     figure {
       margin-right: 1rem;
       margin-left: 1rem;
+    }
+  }
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    @media (min-width: v.$pad) {
+      justify-content: end;
     }
   }
 }

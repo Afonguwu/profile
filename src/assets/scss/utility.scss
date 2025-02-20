@@ -51,11 +51,9 @@
   font-weight: 500;
 }
 .h3 {
-  font-size: v.$h3;
   font-weight: 700;
 }
 .h3-chinese {
-  font-size: v.$h3;
   font-weight: 600;
 }
 .text {
@@ -70,17 +68,54 @@
 .text-center {
   text-align: center;
 }
+.text-nowrap {
+  text-wrap: nowrap;
+}
 
+//btn
+.btn-light {
+  padding: 0.5rem 1.5rem;
+  color: v.$blue-400;
+  background-color: v.$brown-200;
+  border: 1px solid v.$brown-200;
+  border-radius: 12px;
+  &:hover {
+    color: v.$brown-300;
+    background-color: v.$blue-200;
+    border: 1px solid v.$blue-200;
+  }
+}
+.btn-dark {
+  padding: 0.5rem 1.5rem;
+  color: v.$brown-200;
+  background-color: v.$blue-400;
+  border: 1px solid v.$blue-400;
+  border-radius: 12px;
+  &:hover {
+    color: v.$blue-300;
+    background-color: v.$brown-100;
+    border: 1px solid v.$brown-100;
+  }
+}
 //display
 .d-block {
   display: block;
 }
 
 //space
+.mb-s {
+  margin-bottom: 0.5rem;
+}
 .mb-1 {
   margin-bottom: 1rem;
 }
+.mb-2 {
+  margin-bottom: 2rem;
+}
 
+.mr-1 {
+  margin-right: 1rem;
+}
 .p-1 {
   padding: 1rem;
 }

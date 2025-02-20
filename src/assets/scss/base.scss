@@ -55,8 +55,5 @@ body {
 }
 
 section {
-  padding: 1.5rem 2rem;
-  @media (min-width: v.$pad) {
-    padding: 2rem 4rem;
-  }
+  padding: 1.5rem 1rem;
 }

@@ -2,14 +2,86 @@
 import TimelineBtns from '@/components/TimelineBtns.vue'
 import { ref } from 'vue'
 const projectData = ref([
-  {
+  /*example*/
+  /* {
+    num: ,
     workName: '',
     time: '',
-    url: '',
+    thoughts: '',
     pages: [],
-    skill: [],
+    skills: [],
+    githubUrl: '',
+    pagesUrl: '',
+  },  */
+  {
+    num: 0,
+    workName: 'ThinkUpTogether小說網站',
+    time: '2023 / 07 - 2023 / 10',
+    thoughts:
+      '這是一個多人協作專案，旨在建立一個供使用者閱讀小說、參與論壇討論和創作小說的網站。因團隊成員都屬於剛接觸前端領域，因此整體較著重切版的部分',
+    pages: [
+      '首頁：最新消息、熱門書籍展示、熱門留言展示',
+      '搜尋頁面：類別搜尋、文字搜尋',
+      '登入按鈕：登入功能切換、討論區',
+      '討論區：討論文章展示、發文按鈕、查看文章留言',
+    ],
+    skills: [
+      '專案的初期階段，使用便利貼法來發想和篩選網站的核心功能',
+      'Miro 繪製網站地圖、線框圖',
+      'Vite、Scss、Bootstrap 5 開發前端網頁',
+      '多人協作專案，使用 Git Merge 管控版本',
+      '匯入 CKEditor 5 文字編輯器',
+    ],
+    githubUrl: 'https://github.com/Afonguwu/frontend',
+    pagesUrl: 'https://afonguwu.github.io/frontend/',
+  },
+  {
+    num: 1,
+    workName: '律師事務所網站',
+    time: ' 2024 / 04 - 2024 / 06',
+    thoughts:
+      '從身邊的事物中獲得靈感，自小受到長輩的關愛，我希望在自己能力所及的範圍內回報他們。由於長輩的公司自成立以來一直沒有網站或其他對外宣傳管道，因此我希望通過製作一個網站，為公司的曝光率和形象提升做出貢獻。',
+    pages: [
+      '首頁：服務總攬、團隊總攬、品牌簡介、辦公室招租簡介',
+      '服務項目：服務詳細說明',
+      '律師團隊：律師圖卡展示',
+      '律師個人頁面：律師個人詳細資訊',
+      '聯絡我們：品牌聯絡資訊',
+      '合署資訊：辦公室招租資訊',
+    ],
+    skills: [
+      'Figma 繪製線框圖',
+      'Vue.js、Scss、Bootstrap 5 開發前端網頁',
+      'Vue Router 管理路由',
+      'AOS、Swiper、C3.js 增加網頁視覺效果',
+      'GitHub Actions 部屬 GitHub Pages',
+    ],
+    githubUrl: 'https://github.com/Afonguwu/wisdom-win-vite',
+    pagesUrl: 'https://afonguwu.github.io/wisdom-win-vite/#/',
+  },
+  {
+    num: 3,
+    workName: '高雄捷運輕軌地圖',
+    time: ' 2024 / 09 - 2024 / 10',
+    thoughts: '實作 SVG 元素結合資料串接',
+    pages: ['高雄捷運輕軌地圖：顯示票價、顯示乘車時間、票種切換'],
+    skills: [
+      'Whimsical 繪製邏輯流程圖',
+      'Vue.js、Scss、Bootstrap 5 開發前端網頁',
+      'SVG 製作路線圖',
+      'Vue Router 管理路由',
+      'Pinia 管理資料狀態及串接資料模塊',
+      'GitHub Actions 部屬 GitHub Pages',
+    ],
+    githubUrl: 'https://github.com/Afonguwu/tool-box',
+    pagesUrl: 'https://afonguwu.github.io/tool-box/#/',
   },
 ])
+
+let targetValue = ref(2)
+const changeTarget = (val) => {
+  targetValue.value = val
+}
 </script>
 
 <template>
@@ -22,10 +94,10 @@ const projectData = ref([
   </div>
   <main>
     <section class="bg-light" role="introduction">
+      <h2 class="heading-dark h2-chinese">About</h2>
       <div class="introduction">
         <div class="img-block"><img src="https://fakeimg.pl/200x200/" alt="" /></div>
         <div>
-          <h2 class="heading-dark h2-chinese mb-1">About</h2>
           <p class="text-blue-400 text lh-lg">
             我是璨如，疫情期間透過線上體驗課程接觸到前端工程師這個領域，並深深喜愛上參與網頁從無到有的創造過程。
             我是一個熱愛學習與探索新知的人，喜歡專注於細節，追求完美呈現。近期，我的目標是做到精雕細琢但不鑽牛角尖。
@@ -38,12 +110,12 @@ const projectData = ref([
     <section class="bg-dark work">
       <h2 class="heading-brown-200 h2-chinese mb-1">Works</h2>
       <div>
-        <TimelineBtns />
+        <TimelineBtns @change-event="changeTarget" :dotValue="targetValue" />
       </div>
       <div>
         <div class="bg-orange w-fit p-1 mb-1">
-          <h2 class="heading-dark h3">專案名稱</h2>
-          <p class="text-blue-300 fw-b">2024/01~2024/06</p>
+          <h2 class="heading-dark h3 text-nowrap">{{ projectData[targetValue].workName }}</h2>
+          <p class="text-blue-300 fw-b">{{ projectData[targetValue].time }}</p>
         </div>
         <div>
           <div class="img-block">
@@ -60,35 +132,45 @@ const projectData = ref([
               <figcaption class="text-center">Mobile</figcaption>
             </figure>
           </div>
-          <div>
+          <div class="mb-2">
             <div class="mb-1">
-              <h3 class="text-blue-400 fw-b">專案發想</h3>
+              <h3 class="text-blue-400 fw-b mb-1">專案發想</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facere alias cumque
-                maiores aperiam. Dignissimos corrupti sit illum repellat nesciunt? Quod quae non,
-                libero unde possimus accusamus. Doloribus, quia necessitatibus.
+                {{ projectData[targetValue].thoughts }}
               </p>
             </div>
             <div class="mb-1">
-              <h3 class="text-blue-400 fw-b">網站頁面</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo non necessitatibus
-                dolorum, eveniet ratione beatae iure asperiores nemo et voluptates facere
-                repellendus ducimus cupiditate laborum, ea architecto? Ullam, modi porro.
+              <h3 class="text-blue-400 fw-b mb-1">網站頁面</h3>
+              <p class="mb-s" v-for="(page, index) in projectData[targetValue].pages" :key="index">
+                {{ page }}
               </p>
             </div>
             <div class="mb-1">
-              <h3 class="text-blue-400 fw-b">使用技術</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti
-                exercitationem maiores labore molestiae quasi. Nisi, ad! Et delectus voluptatem
-                omnis, recusandae dolores, quod deleniti dolorum in, nemo repellat consequatur!
+              <h3 class="text-blue-400 fw-b mb-1">使用技術</h3>
+              <p
+                class="mb-s"
+                v-for="(skill, index) in projectData[targetValue].skills"
+                :key="index"
+              >
+                {{ skill }}
               </p>
             </div>
           </div>
-          <div>
-            <button><a href="">GitHub</a></button>
-            <button><a href="">Pages</a></button>
+          <div class="btn-group">
+            <a
+              type="button"
+              class="btn-light fw-b mr-1"
+              :href="projectData[targetValue].githubUrl"
+              target="_blank"
+              >GitHub</a
+            >
+            <a
+              type="button"
+              class="btn-dark fw-b"
+              :href="projectData[targetValue].pagesUrl"
+              target="_blank"
+              >Pages</a
+            >
           </div>
         </div>
       </div>
