@@ -4,17 +4,17 @@ const personalLink = [
   {
     href: 'https://github.com/Afonguwu',
     name: 'GitHub',
-    img: ['/cactus01.png', '/cactus01-1.png'],
+    img: ['cactus01.png', 'cactus01-1.png'],
   },
   {
     href: 'https://www.cake.me/s--ajbkAoMqCqH4ggv0jYTKog--/t225310917',
     name: 'Cake',
-    img: ['/cactus02.png', '/cactus02-1.png'],
+    img: ['cactus02.png', 'cactus02-1.png'],
   },
   {
     href: 'mailto:t225310917@gmail.com',
     name: 'Gmail',
-    img: ['/cactus03.png', '/cactus03-1.png'],
+    img: ['cactus03.png', 'cactus03-1.png'],
   },
 ]
 let hoverImg = ref([0, 0, 0])
