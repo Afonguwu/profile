@@ -4,9 +4,6 @@
 .heading-dark {
   color: v.$blue-500;
 }
-.heading-brown-200 {
-  color: v.$brown-200;
-}
 .text-light {
   color: v.$blue-100;
 }
@@ -19,10 +16,13 @@
 .text-blue-400 {
   color: v.$blue-400;
 }
-.notice-blue-200 {
-  color: v.$blue-200;
+.text-brown-100 {
+  color: v.$brown-100;
 }
-.notice-brown-300 {
+.text-brown-200 {
+  color: v.$brown-200;
+}
+.text-brown-300 {
   color: v.$brown-300;
 }
 
@@ -81,8 +81,8 @@
   border-radius: 12px;
   &:hover {
     color: v.$brown-300;
-    background-color: v.$blue-200;
-    border: 1px solid v.$blue-200;
+    background-color: v.$blue-100;
+    border: 1px solid v.$blue-100;
   }
 }
 .btn-dark {
