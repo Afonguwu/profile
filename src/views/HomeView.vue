@@ -35,7 +35,7 @@ const projectData = ref([
     ],
     githubUrl: 'https://github.com/Afonguwu/frontend',
     pagesUrl: 'https://afonguwu.github.io/frontend/',
-    showUrl: [{ url: '/TUT-pc.gif', name: 'Desktop' }],
+    showUrl: [{ url: 'TUT-pc.gif', name: 'Desktop' }],
   },
   {
     num: 1,
@@ -61,9 +61,9 @@ const projectData = ref([
     githubUrl: 'https://github.com/Afonguwu/wisdom-win-vite',
     pagesUrl: 'https://afonguwu.github.io/wisdom-win-vite/#/',
     showUrl: [
-      { url: '/winsdom-pc.gif', name: 'Desktop' },
-      { url: '/winsdom-pad.gif', name: 'Pad' },
-      { url: '/winsdom-mobile.gif', name: 'Mobile' },
+      { url: 'winsdom-pc.gif', name: 'Desktop' },
+      { url: 'winsdom-pad.gif', name: 'Pad' },
+      { url: 'winsdom-mobile.gif', name: 'Mobile' },
     ],
   },
   {
@@ -83,8 +83,8 @@ const projectData = ref([
     githubUrl: 'https://github.com/Afonguwu/tool-box',
     pagesUrl: 'https://afonguwu.github.io/tool-box/#/',
     showUrl: [
-      { url: '/trainmap-pc.gif', name: 'Desktop' },
-      { url: '/trainmap-mobile.gif', name: 'Mobile' },
+      { url: 'trainmap-pc.gif', name: 'Desktop' },
+      { url: 'trainmap-mobile.gif', name: 'Mobile' },
     ],
   },
 ])
