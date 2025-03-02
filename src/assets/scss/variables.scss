@@ -1,28 +1,16 @@
-:root {
-  --primary: #6b9696;
-  --primary-bg: #6b9696;
-  --primary-heading: #3d5656;
-  --primary-mark: #a1dddd;
-  --light-text: #ebeded;
-  --dark-heading: #042525;
-  --secondary-bg: #fff4eb;
-  --secondary-heading: #ecc8a8;
-  --secondary-mark: #a98f78;
-}
 //color variables
-$primary-bg: #6b9696;
-$primary-heading: #3d5656;
-$primary-mark: #a1dddd;
-$light-text: #ebeded;
-$dark-heading: #042525;
-$secondary-bg: #fff4eb;
-$secondary-heading: #ecc8a8;
-$secondary-mark: #a98f78;
+$blue-100: #ebeded;
+$blue-200: #a1dddd;
+$blue-300: #6b9696;
+$blue-400: #3d5656;
+$blue-500: #042525;
+$brown-100: #fff4eb;
+$brown-200: #ecc8a8;
+$brown-300: #a98f78;
 
 //typography variables
 $h1: 3rem;
 $h2: 2rem;
-$h3: 1.5rem;
 $text: 1rem;
 
 //breakpoint
