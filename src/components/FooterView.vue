@@ -7,7 +7,7 @@ const personalLink = [
     img: ['cactus01.png', 'cactus01-1.png'],
   },
   {
-    href: 'https://www.cake.me/s--ajbkAoMqCqH4ggv0jYTKog--/t225310917',
+    href: 'https://www.cake.me/t225310917',
     name: 'Cake',
     img: ['cactus02.png', 'cactus02-1.png'],
   },
@@ -39,6 +39,7 @@ a:hover p {
   <section class="bg-light footer" role="footer">
     <a
       v-for="(item, i) in personalLink"
+      rel="noopener noreferrer"
       :key="i"
       :href="item.href"
       target="_blank"
