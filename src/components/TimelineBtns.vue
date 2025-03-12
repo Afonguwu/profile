@@ -22,13 +22,14 @@ const changeValue = (val) => {
     <circle r="1" cx="99%" cy="50" fill="#a98f78" />
     <circle r="1" cx="95%" cy="40" fill="#a98f78" />
     <circle r="1" cx="95%" cy="60" fill="#a98f78" />
-    <text x="5" y="75" fill="#a1dddd" font-size="12">2024</text>
+    <text x="5" y="75" fill="#a1dddd" font-size="12">2023</text>
+    <text x="30%" y="75" fill="#a1dddd" font-size="12">2024</text>
     <text x="80%" y="75" fill="#a1dddd" font-size="12">2025</text>
     <!-- btn -->
     <circle
       class="dot"
       r="10"
-      cx="25%"
+      cx="20%"
       cy="50"
       :fill="dotValue === 0 ? '#a1dddd' : '#6b9696'"
       stroke="#a98f78"
@@ -48,7 +49,7 @@ const changeValue = (val) => {
     <circle
       class="dot"
       r="10"
-      cx="55%"
+      cx="50%"
       cy="50"
       :fill="dotValue === 2 ? '#a1dddd' : '#6b9696'"
       stroke="#a98f78"
