@@ -11,6 +11,7 @@ const projectData = ref([
     thoughts: '',
     pages: [],
     skills: [],
+    experience:[''],
     githubUrl: '',
     pagesUrl: '',
   },  */
@@ -19,7 +20,7 @@ const projectData = ref([
     workName: 'ThinkUpTogether小說網站',
     time: '2023 / 07 - 2023 / 10',
     thoughts:
-      '這是一個團體協作專案，因喜愛讀小說，我們萌生了創建一個小說網站的想法，讓用戶既能瀏覽小說，又能在論壇中交流和創作。專案過程中，我們使用便利貼法篩選核心功能，但遇到技術瓶頸和組員興趣減少的挑戰。這段經歷教會了我有效溝通和資源協調，並提升了我的靈活性和適應力。',
+      '這是一個線上切版課程的團體協作專案，因組員喜愛讀小說，我們萌生了創建一個小說網站的想法，讓用戶既能瀏覽小說，又能在論壇中交流和創作。',
     pages: [
       '首頁：最新消息、熱門書籍展示、熱門留言展示',
       '搜尋頁面：類別搜尋、文字搜尋',
@@ -32,6 +33,11 @@ const projectData = ref([
       'Vite、Scss、Bootstrap 5 開發前端網頁',
       '多人協作專案，使用 Git Merge 管控版本',
       '匯入 CKEditor 5 文字編輯器',
+    ],
+    experience: [
+      '組員技術不足，主動承擔切版工作，並協助組員學習',
+      '雖未完成整個網頁，但專注於切版部分，最大化完成度',
+      '面對技術挑戰，積極學習新技能並應用於專案中，提升專業能力',
     ],
     githubUrl: 'https://github.com/Afonguwu/frontend',
     pagesUrl: 'https://afonguwu.github.io/frontend/',
@@ -58,6 +64,11 @@ const projectData = ref([
       'AOS、Swiper、C3.js 增加網頁視覺效果',
       'GitHub Actions 部屬 GitHub Pages',
     ],
+    experience: [
+      '調整 c3 圖表初始化方式，成功解決 Vue 中的渲染錯誤',
+      '設計動畫顯示客戶數與案件數增長，增強視覺效果',
+      '實作滾動事件監聽，根據頁面滾動距離調整 header 背景透明度，提升視覺效果並增強用戶體驗',
+    ],
     githubUrl: 'https://github.com/Afonguwu/wisdom-win-vite',
     pagesUrl: 'https://afonguwu.github.io/wisdom-win-vite/#/',
     showUrl: [
@@ -70,7 +81,8 @@ const projectData = ref([
     num: 3,
     workName: '高雄捷運輕軌地圖',
     time: ' 2024 / 09 - 2024 / 10',
-    thoughts: '實作 SVG 元素結合資料串接',
+    thoughts:
+      '實作 SVG 操作建立互動式路線圖，並解決 Vue 與 SVG 的資料綁定問題，確保即時更新票價與行車時間。',
     pages: ['高雄捷運輕軌地圖：顯示票價、顯示乘車時間、票種切換'],
     skills: [
       'Whimsical 繪製邏輯流程圖',
@@ -79,6 +91,10 @@ const projectData = ref([
       'Vue Router 管理路由',
       'Pinia 管理資料狀態及串接資料模塊',
       'GitHub Actions 部屬 GitHub Pages',
+    ],
+    experience: [
+      '串接 API 失敗後，迅速改用本地端資料，確保數據穩定',
+      '採用 SVG 來優化圖像，解決圖片解析度問題',
     ],
     githubUrl: 'https://github.com/Afonguwu/tool-box',
     pagesUrl: 'https://afonguwu.github.io/tool-box/#/',
@@ -207,6 +223,16 @@ const closeImage = () => {
                   :key="index"
                 >
                   {{ skill }}
+                </p>
+              </div>
+              <div class="mb-1">
+                <h3 class="text-blue-400 fw-b mb-1">專案挑戰 & 解決方案</h3>
+                <p
+                  class="mb-s"
+                  v-for="(experience, index) in projectData[targetValue].experience"
+                  :key="index"
+                >
+                  {{ experience }}
                 </p>
               </div>
             </div>
